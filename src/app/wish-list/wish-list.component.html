@@ -1,0 +1,47 @@
+<div class="container mt-5">
+  <h1 class="mb-4">WishList</h1>
+  <div style="height: 400px;" class="row m-0">
+    @for(movie of wishlistService.getWishlist(); track movie.id ; let i = $index){
+    <div class="col-md-6 mb-4">
+      <div class="movie-card">
+        <div class="row ">
+          <div class="col-md-4">
+            <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="card-img-top" alt="Movie Poster">
+          </div>
+          <div class="col-md-8">
+            <div class="movie-details">
+              <div class="d-flex  mt-2">
+                <h4 class="me-auto">{{movie.title}}</h4>
+                <span (click)="removeFromWishlist(movie)" style="cursor: pointer;">
+                  <i class="fa-regular fa-heart fa-2x" [class.filled]="wishlistService.isInWishlist(movie)"></i>
+                </span>
+              </div>
+              <p class="sp">{{movie.release_date |customDate}}</p>
+              <div class="d-flex mb-2">
+                <ngb-rating class="mb-2 me-3" [rate]="movie.vote_average" />
+                <span class="mt-2 text-danger">({{movie.vote_count}})</span>
+              </div>
+              <p class="card-text">{{ movie.overview }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    }
+    @empty { <div class="col-12 ">
+      <div class="empty my-5 text-center">
+        <img src="../../assets/heart-slash.png">
+        <p class="fs-3">No Movies in watch list </p>
+        <button class="btn btn-primary">
+          <a routerLink="/">
+            Back to Home Page
+          </a>
+
+        </button>
+      </div>
+    </div>
+
+    }
+  </div>
+</div>

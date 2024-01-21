@@ -1,0 +1,50 @@
+/* Base styles */
+.toggle-button {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+}
+
+.toggle-button label {
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  user-select: none;
+}
+
+
+.toggle-button__icon {
+  position: absolute;
+  top: 42%;
+  left: 32px;
+  height: 22px;
+  width: 22px;
+  background-color: #f7f0f0;
+  border-radius: 50%;
+  transition: transform 2s ease-out, background-color 2s ease-out;
+}
+
+.toggle-button label .fa-moon {
+  display: inline-block;
+  color: rgb(138, 147, 147);
+}
+
+.toggle-button label .fa-sun {
+  display: inline-block;
+  color: rgb(196, 181, 165);
+}
+
+.toggle-button input[type="checkbox"]:checked + label .fa-moon {
+  display: none; /* Hide the moon icon when checked */
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+  .toggle-button label {
+    width: 40px;
+  }
+
+}
+

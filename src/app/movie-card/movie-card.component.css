@@ -1,0 +1,56 @@
+
+.date {
+  margin-top: -5px;
+  font-weight: 300;
+  margin-right: 5px;
+  margin-left: -8px;
+  font-size: 13px;
+}
+.fa-regular.filled {
+  color: #f5d636;
+    font-weight: 900;
+    color: #f5d636;
+}
+.my-div{
+  position: relative;
+}
+
+img {
+  border-radius: 10px;
+  box-shadow: 5px 5px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+  height: 350px; cursor: pointer;
+}
+.card-title {
+  cursor: pointer;font-weight: 600;
+}
+/* Add a media query for small screens */
+@media screen and (max-width: 600px) {
+  img {
+    box-shadow: none; /* Remove box-shadow for small screens */
+  }
+}
+
+/* Add hover effect for scaling */
+img:hover {
+  transform: scale(1.1);
+}
+
+/* Add animation for a subtle pulse effect */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.fa-regular{
+  margin-top: -20px;
+  margin-right: 20px;
+  font-size: 24px;
+  color:#f5d636
+}

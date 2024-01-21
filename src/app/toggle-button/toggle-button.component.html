@@ -1,0 +1,7 @@
+<div class="toggle-button toggle-button--aava">
+  <label for="toggleButton">
+    <div (click)="toggleDarkMode()" class="toggle-button__icon">
+      <i class="fas" [ngClass]="{'fa-moon': isDarkMode, 'fa-sun': !isDarkMode}"></i> <!-- Light mode icon -->
+    </div>
+  </label>
+</div>

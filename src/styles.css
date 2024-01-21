@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.dark-mode {
+  background-color: rgb(16, 15, 15);
+  color: white;
+}
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+.ellipse-circul {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding-top: 0px;
+  background-color: rgb(168, 165, 165);
+  border-radius: 50%;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: -40px;
+  left: 5px;
+  display: flex;
+}

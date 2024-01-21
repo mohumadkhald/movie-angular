@@ -1,0 +1,22 @@
+<div class="container">
+
+  <form (ngSubmit)="searchMovies()"  class="my-5">
+    <div class="input-group">
+      <input type="text" class="form-control me-3" [(ngModel)]="searchQuery"  name="searchQuery" id="exampleInput" placeholder="{{ searchQuery }}">
+      <div class="input-group-append">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </div>
+    </div>
+  </form>
+
+  <div class="row">
+    @for (movie of searchResults; track movie.id; let i = $index){
+      <div class="col-4">
+        <app-movie-card [movieItem]="movie"></app-movie-card>
+      </div>
+    }  
+  </div>
+
+  
+</div>
+

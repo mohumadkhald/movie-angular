@@ -1,0 +1,23 @@
+<div class="col m-4 p-3">
+  <ng-container *ngIf="movie else none">
+    <app-movie-item-details [movie]="movie"></app-movie-item-details>
+  </ng-container>
+  <ng-template #none>
+    <app-not-found></app-not-found>
+  </ng-template>
+</div>
+<ng-container *ngIf="movie">
+<hr>
+<h1 class="m-4">Recommendations</h1>
+<div *ngIf="movies && movies.length > 0" style="padding: 2vw;" class="row row-cols-1 row-cols-md-6 g-4">
+  <div *ngFor="let movie of movies; let i = index" class="col">
+    <app-movie-recommend [movie]="movie"></app-movie-recommend>
+  </div>
+</div>
+  <div *ngIf="!movies  || movies.length === 0" class="m-4">
+    <div *ngIf="movie">
+      No recommendations available.
+    </div>
+  </div>
+</ng-container>
+

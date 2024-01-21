@@ -1,0 +1,48 @@
+.poster {
+  height: 500px;
+  border-radius: 4%;
+  box-shadow:  0px -4px 8px rgb(55, 19.4, 0.6), 0px 1px 8px rgb(0, 4, 1);
+}
+.date {
+  font-weight: 280;
+  font-size: 14px;
+  margin-left: 10px;
+}
+p {
+  color: #666565;
+  font-size: 16px;
+  height: 90px;
+  overflow: hidden;
+  overflow-y: auto; /* Add a vertical scrollbar when content overflows */
+}
+.desc {
+  font-size: 13px; font-weight: 300;
+}
+ngb-rating{
+  font-size: 32px;margin-top:-12px;color:#E4BA10
+}
+
+.btn1 {
+  background-color: #ffe353;
+  border: none;
+  border-radius: 20px;
+  font-weight: 300;
+  padding: 0 12px;
+}
+.logo {
+  width: 70px;
+  height: 50px;
+}
+.fa-regular.filled {
+  position: relative;
+  font-weight: 900;
+  color: #f5d636;
+}
+
+i {
+  color: #f5d636;
+}
+
+.btn-web {
+  border-bottom: 1px solid rgb(240, 188, 135);border-top: 1px solid rgb(240, 188, 135)
+}

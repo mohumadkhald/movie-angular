@@ -1,0 +1,30 @@
+button {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 48px;
+    border: 2px solid #f2af29;
+    transition: all 0.3s ease;
+  }
+  
+  button::after {
+    font-size: 18px;
+    color: #f2af29;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    border-color: #14519f;
+  }
+  
+  button:hover::after {
+    color: #14519f;
+  }
+  
+  .btn-plus::after {
+    content: "\279C";
+  }
+  
+  .btn-minus::after {
+    content: "\2190"; /* Use the Unicode character for the right arrow with a hook */
+  }

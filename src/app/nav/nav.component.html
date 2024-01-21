@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-lg tertiary p-1 text-dark" style="background-color: #f5d636;">
+  <div class="container nav-item d-flex justify-content-between align-items-center">
+    <a class="navbar-brand" routerLink="/">Movie App</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="wishlist" routerLinkActive="active_link">
+            <span class="me-2"><i class="fa-solid fa-heart fa-2x"></i></span>
+            <span class="pe-1">WishList</span>
+            <span class="badge rounded-pill bg-dark">{{ wishlistService.getWishlist().length }}</span>
+          </a>
+        </li>
+        <app-toggle-button></app-toggle-button>
+      </ul>
+    </div>
+  </div>
+</nav>

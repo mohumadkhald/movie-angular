@@ -1,0 +1,53 @@
+<div class="row me-2">
+    <div class="col-md-4 me-4 ">
+        @if(movie.poster_path != null){
+            <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="poster card-img-top"
+            [alt]="movie.title">
+        }
+    </div>
+    <div class="col-md-6">
+        <div class="d-flex  mt-1">
+            <h1 class="card-text me-auto">{{movie.title}}</h1>
+            <span (click)="toggleWishlist() " style="cursor: pointer;">
+                <i class="fa-regular fa-heart fa-2x" [class.filled]=" wishlistService.isInWishlist(movie)"></i>
+            </span>
+        </div>
+        <span class="date">{{date}}</span>
+        <div class="row mt-3">
+            <div class="d-flex">
+                <ngb-rating class="card-text mb-2 me-3" [rate]="movie.vote_average" />    
+                <span class="text-danger">({{movie.vote_count}})</span>
+            </div>
+            <div class="desc col-md-12">
+                <p>{{ movie.overview }}</p>
+            </div>
+            <div class="col-md-12">
+                @for (name of names; track $index) {
+                <button class="btn1 m-2 pe-3"><span class="text-center">{{name}}</span></button>
+                }
+            </div>
+        </div>
+        <div class="col-md-9 mt-3">
+            <div class="d-flex flex-column mt-2">
+                <span class="card-text col-md-6 mb-2">Time-Duration: {{ movie.runtime }} Min</span>
+                <div class="d-flex col flex-wrap mt-2">
+                    <span class="card-text col-md-2 me-2 mb-2">Language:</span>
+                    <span class="card-text col-md-8 mb-2">
+                        <span *ngFor="let item of movie.spoken_languages" class="me-1"> {{ item.english_name }}</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 mt-2">
+            @for (logo of logos; track $index) {
+            @if(logo != null){
+            <img class="logo m-2" [src]="'https://image.tmdb.org/t/p/w500/' + logo">
+            }
+            }
+        </div>
+        <a href="https://www.imdb.com/title/{{movie.imdb_id}}/"
+            class="btn btn-web text-danger link mt-3" target="_blank">
+            Website <i class="fas fa-link"></i>
+        </a>
+    </div>
+</div>
