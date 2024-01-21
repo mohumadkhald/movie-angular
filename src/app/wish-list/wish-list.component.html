@@ -18,7 +18,6 @@
               </div>
               <p class="sp">{{movie.release_date |customDate}}</p>
               <div class="d-flex mb-2">
-                <ngb-rating class="mb-2 me-3" [rate]="movie.vote_average" />
                 <span class="mt-2 text-danger">({{movie.vote_count}})</span>
               </div>
               <p class="card-text">{{ movie.overview }}</p>

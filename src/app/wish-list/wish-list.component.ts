@@ -4,7 +4,6 @@ import { Movie } from '../interface/movie';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CustomDatePipe } from '../pipes/format-date.pipe';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -12,7 +11,7 @@ import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
   selector: 'app-wish-list',
   templateUrl: './wish-list.component.html',
   styleUrls: ['./wish-list.component.css'],
-  imports:[NgFor, NgIf,RouterLink,CustomDatePipe,NgbRatingModule],
+  imports:[NgFor, NgIf,RouterLink,CustomDatePipe],
   standalone:true
 })
 export class WishListComponent implements OnInit {

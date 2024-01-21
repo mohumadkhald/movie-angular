@@ -1,5 +1,4 @@
 import { AfterContentChecked, Component, Input, OnChanges, OnInit } from '@angular/core';
-import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
 import { Movie, Companie } from '../interface/movie';
 import { Genre } from '../interface/movie';
@@ -11,7 +10,7 @@ import { WishlistService } from '../services/wishlist.service';
   standalone: true,
   templateUrl: './movie-item-details.component.html',
   styleUrls: ['./movie-item-details.component.css'],
-imports:[NgClass, NgIf,NgFor,NgbRatingModule]
+imports:[NgClass, NgIf,NgFor]
 })
 export class MovieItemDetailsComponent implements OnChanges, OnInit {
   @Input() movie!: Movie;
