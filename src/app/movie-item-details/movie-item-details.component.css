@@ -9,7 +9,6 @@
   margin-left: 10px;
 }
 p {
-  color: #666565;
   font-size: 16px;
   height: 90px;
   overflow: hidden;
@@ -46,3 +45,4 @@ i {
 .btn-web {
   border-bottom: 1px solid rgb(240, 188, 135);border-top: 1px solid rgb(240, 188, 135)
 }
+

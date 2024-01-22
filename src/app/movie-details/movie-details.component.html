@@ -9,15 +9,17 @@
 <ng-container *ngIf="movie">
 <hr>
 <h1 class="m-4">Recommendations</h1>
-<div *ngIf="movies && movies.length > 0" style="padding: 2vw;" class="row row-cols-1 row-cols-md-6 g-4">
-  <div *ngFor="let movie of movies; let i = index" class="col">
-    <app-movie-recommend [movie]="movie"></app-movie-recommend>
-  </div>
-</div>
-  <div *ngIf="!movies  || movies.length === 0" class="m-4">
-    <div *ngIf="movie">
-      No recommendations available.
+<div *ngIf="movies && movies.length > 0">
+  <div style="padding: 2vw;" class="row row-cols-2 row-cols-md-3 row-cols-xlg-6 row-cols-lg-5 g-4">
+    <div *ngFor="let movie of movies; let i = index" class="col custom-xlg-6">
+      <app-movie-recommend [movie]="movie"></app-movie-recommend>
     </div>
   </div>
+</div>
+<div *ngIf="!movies || movies.length === 0" class="m-4 text-center">
+  <div *ngIf="!movie">
+    No recommendations available.
+  </div>
+</div>
 </ng-container>
 

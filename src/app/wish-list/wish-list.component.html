@@ -1,8 +1,8 @@
-<div class="container mt-5">
+<div class="p-2 mt-5">
   <h1 class="mb-4">WishList</h1>
   <div style="height: 400px;" class="row m-0">
     @for(movie of wishlistService.getWishlist(); track movie.id ; let i = $index){
-    <div class="col-md-6 mb-4">
+    <div class="col-md-12 col-lg-6 coulmn mb-4">
       <div class="movie-card">
         <div class="row ">
           <div class="col-md-4">
@@ -16,10 +16,11 @@
                   <i class="fa-regular fa-heart fa-2x" [class.filled]="wishlistService.isInWishlist(movie)"></i>
                 </span>
               </div>
-              <p class="sp">{{movie.release_date |customDate}}</p>
-              <div class="d-flex mb-2">
-                <span class="mt-2 text-danger">({{movie.vote_count}})</span>
-              </div>
+              <p class="sp mt-3">{{movie.release_date |customDate}}</p>
+              <div style="position: relative;" class="d-flex">
+                <app-star-rating  [rating]="movie.vote_average"></app-star-rating>
+                <span style="position: absolute; left: 400px; top: -8px;" class="text-danger mb-2 mt-2">({{movie.vote_count}})</span>
+            </div>
               <p class="card-text">{{ movie.overview }}</p>
             </div>
           </div>
@@ -44,3 +45,4 @@
     }
   </div>
 </div>
+
