@@ -18,7 +18,7 @@
 .toggle-button__icon {
   position: absolute;
   top: 42%;
-  left: 32px;
+  right: 30%;
   height: 22px;
   width: 22px;
   background-color: #f7f0f0;

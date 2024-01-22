@@ -5,12 +5,13 @@ import { Genre } from '../interface/movie';
 
 import { DatePipe, NgClass,NgFor, NgIf } from '@angular/common';
 import { WishlistService } from '../services/wishlist.service';
+import { StarRatingComponent } from "../star-rating/star-rating.component";
 @Component({
-  selector: 'app-movie-item-details',
-  standalone: true,
-  templateUrl: './movie-item-details.component.html',
-  styleUrls: ['./movie-item-details.component.css'],
-imports:[NgClass, NgIf,NgFor]
+    selector: 'app-movie-item-details',
+    standalone: true,
+    templateUrl: './movie-item-details.component.html',
+    styleUrls: ['./movie-item-details.component.css'],
+    imports: [NgClass, NgIf, NgFor, StarRatingComponent]
 })
 export class MovieItemDetailsComponent implements OnChanges, OnInit {
   @Input() movie!: Movie;

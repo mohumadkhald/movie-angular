@@ -1,4 +1,4 @@
-<div style="height: 450px;" class=" me-0 m-2">
+<div style="height: 450px;" class="row-cols-xlg-5 m-2">
   <div class="card-body">
     <div class="my-div">
       <img (click)="redirectToDetails(movieItem.id)"
@@ -6,14 +6,13 @@
            <div class="progress-bar">
 					<app-progress-bar [movieId]="movieItem.id"  [percentages]="[movieItem.vote_average]"></app-progress-bar>
            </div>
-           <h1>Test</h1>
            <span class="ellipse-circul">
             <i class="fa-solid fa-ellipsis"></i>
         </span>        
     </div>
     <h5 class="card-title mt-4" (click)="redirectToDetails(movieItem.id)">{{movieItem!.title}}</h5>
   </div>
-  <div class="d-flex p-2 mt-2">
+  <div class="d-flex p-2 mt-2 mb-4">
     <span class="card-text date me-auto">{{movieItem.release_date | customDate}}</span>
     <span (click)="toggleWishlist() " style="cursor: pointer;">
       <i   class="fa-regular fa-heart fa-2x" [class.filled]=" wishlistService.isInWishlist(movieItem)"></i>

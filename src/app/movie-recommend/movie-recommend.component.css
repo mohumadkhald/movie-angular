@@ -57,3 +57,13 @@ img {
   stroke-dasharray: 440;
   /* fill: azure; */
 }
+
+
+@media screen and (min-width: 1401px) {
+  .row-cols-xlg {
+    /* Your custom styles for screens larger than 1400px go here */
+    /* For example, you can set the width of each column */
+    width: 100%;
+    height: 34rem;
+  }
+}
