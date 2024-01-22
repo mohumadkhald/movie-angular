@@ -1,8 +1,5 @@
-
-<div class="text-center">
-  <button class="btn-minus me-3" (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1">
-  </button>
-  <span class="me-3" name="curent">{{currentPage}}</span>
-  <button class="btn-plus" (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages">
-  </button>
+<div class="fixed-bottom text-center">
+  <button class="btn-minus me-3" (click)="onPageChange(currentPage - 1)" [disabled]="currentPage === 1"></button>
+  <span class="me-3" name="current">{{currentPage}}</span>
+  <button class="btn-plus" (click)="onPageChange(currentPage + 1)" [disabled]="currentPage === totalPages"></button>
 </div>
