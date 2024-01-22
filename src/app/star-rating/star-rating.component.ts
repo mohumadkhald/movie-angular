@@ -1,13 +1,14 @@
 // star-rating.component.ts
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgClass, NgFor } from '@angular/common';
 import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-star-rating',
   standalone: true,
+  imports: [NgClass,NgFor,CommonModule],
   template: `
     <div class="star-rating">
-      <span class="me-3">Rate: </span>
+      <span class="">Rate: </span>
       <!-- Static stars with fixed color and size -->
       <i class="fas fa-star static-star" *ngFor="let _ of staticStars"></i>
       <!-- Dynamic stars with ngClass -->
@@ -21,7 +22,7 @@ import { Component, Input } from '@angular/core';
       .star-rating {
         display: flex;
         align-items: center;
-        width: 100%; /* Use 100% width to make it responsive */
+        width: 80%; /* Use 100% width to make it responsive */
       }
 
       .static-star,
@@ -46,7 +47,6 @@ import { Component, Input } from '@angular/core';
       }
     `,
   ],
-  imports: [CommonModule],
 })
 export class StarRatingComponent {
   private _rating: number = 5; // Default to a rating of 5 for demonstration
