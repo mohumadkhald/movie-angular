@@ -18,6 +18,7 @@ import { CustomDatePipe } from "../pipes/format-date.pipe";
   imports: [RouterLink, ProgressBarComponent,CommonModule,CustomDatePipe]
 })
 export class MovieRecommendComponent {
+  x : number[]=[10,20,30]
   @Input() movie!: Movie;
   currentId!: string;
   date!: string;
