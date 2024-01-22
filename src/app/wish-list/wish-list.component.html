@@ -6,16 +6,11 @@
       <div class="movie-card">
         <div class="row ">
           <div class="col-md-4">
-            <a href="https://www.imdb.com/title/{{movie.imdb_id}}/" class="btn btn-web text-danger link mt-3"
-            target="_blank">
-            <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="card-img-top"
-                alt="Movie Poster">
-        </a>
+            <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="card-img-top" alt="Movie Poster">
           </div>
-          
           <div class="col-md-8">
             <div class="movie-details">
-              <div class="d-flex  mt-2">
+              <div class="d-flex  mt-4">
                 <h4 class="me-auto">{{movie.title}}</h4>
                 <span (click)="removeFromWishlist(movie)" style="cursor: pointer;">
                   <i class="fa-regular fa-heart fa-2x" [class.filled]="wishlistService.isInWishlist(movie)"></i>
@@ -29,6 +24,10 @@
               </div>
               <p class="card-text mt-5">{{ movie.overview }}</p>
             </div>
+            <a href="https://www.imdb.com/title/{{movie.imdb_id}}/" class="btn btn-web text-danger link mt-3"
+              target="_blank">
+              See Now <i class="fas fa-link"></i>
+            </a>
           </div>
         </div>
       </div>

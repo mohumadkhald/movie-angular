@@ -13,7 +13,7 @@ import { NgClass } from '@angular/common';
 })
 export class ToggleButtonComponent {
 
-  isDarkMode: boolean = true;
+  isDarkMode: boolean = false;
 
   toggleDarkMode(): void {
     toggleDarkMode();

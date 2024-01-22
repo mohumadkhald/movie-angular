@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   template: `
     <div class="star-rating">
-      <span class="me-3 text-dark">Rate: </span>
+      <span class="me-3">Rate: </span>
       <!-- Static stars with fixed color and size -->
       <i class="fas fa-star static-star" *ngFor="let _ of staticStars"></i>
       <!-- Dynamic stars with ngClass -->
