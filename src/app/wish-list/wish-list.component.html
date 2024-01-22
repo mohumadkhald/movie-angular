@@ -6,8 +6,13 @@
       <div class="movie-card">
         <div class="row ">
           <div class="col-md-4">
-            <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="card-img-top" alt="Movie Poster">
+            <a href="https://www.imdb.com/title/{{movie.imdb_id}}/" class="btn btn-web text-danger link mt-3"
+            target="_blank">
+            <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="card-img-top"
+                alt="Movie Poster">
+        </a>
           </div>
+          
           <div class="col-md-8">
             <div class="movie-details">
               <div class="d-flex  mt-2">
@@ -16,12 +21,13 @@
                   <i class="fa-regular fa-heart fa-2x" [class.filled]="wishlistService.isInWishlist(movie)"></i>
                 </span>
               </div>
-              <p class="sp mt-5">{{movie.release_date |customDate}}</p>
+              <p class="sp mt-2">{{movie.release_date |customDate}}</p>
               <div style="position: relative;" class="d-flex mt-3">
-                <app-star-rating  [rating]="movie.vote_average"></app-star-rating>
-                <span style="position: absolute; left: 400px; top: -8px;" class="text-danger mb-2 mt-2">({{movie.vote_count}})</span>
-            </div>
-              <p class="card-text">{{ movie.overview }}</p>
+                <app-star-rating [rating]="movie.vote_average"></app-star-rating>
+                <span style="position: absolute; left: 400px; top: -8px;"
+                  class="text-danger mb-2 mt-2">({{movie.vote_count}})</span>
+              </div>
+              <p class="card-text mt-5">{{ movie.overview }}</p>
             </div>
           </div>
         </div>
@@ -45,4 +51,3 @@
     }
   </div>
 </div>
-
