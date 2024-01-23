@@ -1,25 +1,25 @@
 <div class="row me-2">
-    <div class="col-md-4 me-4 ">
+    <div class="col-md-5 me-4 ">
         @if(movie.poster_path != null){
         <img [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path" class="poster card-img-top"
             [alt]="movie.title">
         }
     </div>
-    <div class="col-md-6">
-        <div class="d-flex  mt-1">
+    <div class="myDiv mt-3 col-md-6">
+        <div class="d-flex">
             <h1 class="card-text me-auto">{{movie.title}}</h1>
             <span (click)="toggleWishlist() " style="cursor: pointer;">
-                <i class="fa-regular fa-heart fa-2x" [class.filled]=" wishlistService.isInWishlist(movie)"></i>
+                <i class="fa-regular mt-2 fa-heart fa-2x" [class.filled]=" wishlistService.isInWishlist(movie)"></i>
             </span>
         </div>
         <span class="date">{{date}}</span>
-        <div class="row mt-3">
+        <div class="row mt-2">
             <div style="position: relative;" class="d-flex">
                 <ngb-rating class="mt-1 me-2" [rate]="movie.vote_average" />  
                 <span class="text-danger mb-2 mt-3">({{movie.vote_count}})</span>
             </div>
               
-            <div class="desc mt-3 col-md-12">
+            <div class="desc mt-2 col-md-12">
                 <p>{{ movie.overview }}</p>
             </div>
             <div class="col-md-12">

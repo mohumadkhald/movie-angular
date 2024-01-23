@@ -1,5 +1,5 @@
 .poster {
-  height: 500px;
+  height: 83vh;
   border-radius: 4%;
   box-shadow:  0px -4px 8px rgb(55, 19.4, 0.6), 0px 1px 8px rgb(0, 4, 1);
 }
@@ -46,3 +46,29 @@ i {
   border-bottom: 1px solid rgb(240, 188, 135);border-top: 1px solid rgb(240, 188, 135)
 }
 
+/* Extra Small (XS) devices (phones, less than 576px) */
+@media only screen and (max-width: 575.98px) {
+  img {
+    width: 90vw;
+    margin-left: -6vw;
+  }
+  .myDiv{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    margin-top: 4vw;
+  }
+}
+
+/* Small (SM or MS) devices (tablets, 576px and up) */
+@media only screen and (min-width: 576px) and (max-width: 767.98px) {
+  /* Your styles for Small screens go here */
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1922.px) {
+  img{
+    width: 70vw;
+    height: 60vh;
+  }
+  /* Your styles for Small screens go here */
+}
