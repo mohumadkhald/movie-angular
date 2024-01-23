@@ -1,5 +1,5 @@
 .poster {
-  height: 500px;
+  height: 520px;
   border-radius: 4%;
   box-shadow:  0px -4px 8px rgb(55, 19.4, 0.6), 0px 1px 8px rgb(0, 4, 1);
 }
@@ -66,9 +66,6 @@ i {
 }
 
 @media only screen and (min-width: 1500px) and (max-width: 1922.px) {
-  img{
-    width: 80vw;
-    height: 80vh;
-  }
+  
   /* Your styles for Small screens go here */
 }
