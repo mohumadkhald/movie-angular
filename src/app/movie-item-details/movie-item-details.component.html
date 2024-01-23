@@ -15,8 +15,8 @@
         <span class="date">{{date}}</span>
         <div class="row mt-3">
             <div style="position: relative;" class="d-flex">
-                <app-star-rating  [rating]="movie.vote_average"></app-star-rating>
-                <span style="position: absolute; left: 400px; top: -8px;" class="text-danger mb-2 mt-2">({{movie.vote_count}})</span>
+                <ngb-rating class="mt-1 me-2" [rate]="movie.vote_average" />  
+                <span class="text-danger mb-2 mt-3">({{movie.vote_count}})</span>
             </div>
               
             <div class="desc mt-3 col-md-12">

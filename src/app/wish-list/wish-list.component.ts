@@ -5,14 +5,14 @@ import { NgFor, NgIf } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CustomDatePipe } from '../pipes/format-date.pipe';
 import { StarRatingComponent } from "../star-rating/star-rating.component";
-
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
     selector: 'app-wish-list',
     templateUrl: './wish-list.component.html',
     styleUrls: ['./wish-list.component.css'],
     standalone: true,
-    imports: [NgFor, NgIf, RouterLink, CustomDatePipe, StarRatingComponent]
+    imports: [NgFor, NgIf, RouterLink, CustomDatePipe, StarRatingComponent,NgbRatingModule]
 })
 export class WishListComponent implements OnInit {
   @Input() movie!: Movie;

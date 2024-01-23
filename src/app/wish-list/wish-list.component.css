@@ -53,7 +53,13 @@ a{
     color:#666 ;
 }
 
-
+ngb-rating {
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+    color: #d8b508;
+}
 
 
 @media screen and (min-width: 1300px) {
