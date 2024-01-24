@@ -7,7 +7,7 @@
     </div>
     <div class="myDiv col-md-6">
         <div class="d-flex">
-            <h1 class="card-text me-auto">{{movie.title}}</h1>
+            <h2 class="card-text me-auto">{{movie.title}}</h2>
             <span (click)="toggleWishlist() " style="cursor: pointer;">
                 <i class="fa-regular mt-2 fa-heart fa-2x" [class.filled]=" wishlistService.isInWishlist(movie)"></i>
             </span>
