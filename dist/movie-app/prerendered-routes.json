@@ -1,0 +1,8 @@
+{
+  "routes": [
+    "/",
+    "/not-found",
+    "/search-results",
+    "/wishlist"
+  ]
+}
