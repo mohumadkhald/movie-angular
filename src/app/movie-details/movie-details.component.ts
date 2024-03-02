@@ -18,25 +18,33 @@ export class MovieDetailsComponent implements OnChanges {
   movie !: Movie;
   movies : Movie[] = [];
   @Input() id!: number;
-  constructor(private moviesService: MoviesService,private route:ActivatedRoute, private router: Router,public wishlistService: WishlistService) {}
+  loading: boolean = true; // Flag to indicate loading state
+  showContent: boolean = false; // Flag to control visibility of content
+  
+  constructor(private moviesService: MoviesService,private route:ActivatedRoute, private router: Router, public wishlistService: WishlistService) {}
 
   ngOnChanges() {
-    // const currentId : any = this.route.snapshot.paramMap.get('id');
+    // Simulate a 15-second delay
+    setTimeout(() => {
+      this.loading = false; // Set loading flag to false after 15 seconds
+      this.showContent = true; // Set showContent flag to true after 15 seconds
+    }, 500);
+    
+    // Fetch movie details and recommendations after the delay
     this.moviesService.getMovieDetails(this.id).subscribe((res:any) => {
       if (res) {
         this.movie = res;        
       } else {
-        this.router.navigate ( ['/not-found'] );
+        this.router.navigate(['/not-found']);
       }
     });
-    this.moviesService.getRecommendDetails(this.id).subscribe((res:Data) => {
+    
+    this.moviesService.getRecommendDetails(this.id).subscribe((res: any) => {
       if (res) {
         this.movies = res["results"];
       } else {
         console.error("No Movies recommend found in the response.");
       }
     });
-
   }
-  
 }
