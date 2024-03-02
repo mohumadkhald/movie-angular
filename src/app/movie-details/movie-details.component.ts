@@ -28,7 +28,7 @@ export class MovieDetailsComponent implements OnChanges {
     setTimeout(() => {
       this.loading = false; // Set loading flag to false after 15 seconds
       this.showContent = true; // Set showContent flag to true after 15 seconds
-    }, 500);
+    }, 300);
     
     // Fetch movie details and recommendations after the delay
     this.moviesService.getMovieDetails(this.id).subscribe((res:any) => {
